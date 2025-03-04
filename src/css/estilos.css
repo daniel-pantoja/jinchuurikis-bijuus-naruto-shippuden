@@ -1,0 +1,201 @@
+body {
+  font-family: "Naruto", serif;
+  background-image: url(../imagens/fundo-bijuus.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+  gap: 30px;
+}
+
+.cabecalho {
+  display: flex;
+  justify-content: center;
+}
+.cabecalho .titulo {
+  width: 25%;
+}
+
+
+.cartao {
+  border-radius: 10px;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  gap: 5px;
+  position: absolute;
+}
+.cartao.selecionado {
+  opacity: 1;
+  z-index: 1;
+}
+
+
+.lista-jinchuurikis {
+  width: 300px;
+  height: 500px;
+  border-radius: 10px;
+  position: relative;
+  padding: 12px;
+}
+.slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 130px;
+}
+
+
+.cartao .nome {
+  font-size: 13px;
+  padding: 5px;
+  text-align: center;
+  text-transform: uppercase;
+  background: radial-gradient(circle, #ffffffb9, #c5bdb094, #645f5f60);
+  border: 2px solid #ffffff1a;
+  border-radius: 4px;
+}
+.cartao .imagem-carta {
+  max-width: 260px;
+  align-self: center;
+}
+.cartao .informacoes {
+  font-family: "Naruto-Descricao", serif;
+  border-radius: 5px;
+  max-width: 300px;
+  color: #000000;
+  background: radial-gradient(circle, #ffffffb9, #c5bdb094, #645f5f60);
+  border: 2px solid #ffffff1a;
+  text-align: left;
+  line-height: 1.5;
+  padding: 5px;
+}
+.cartao .descricao {
+  padding: 5px;
+  max-height: 110px;
+  overflow-y: scroll;
+  font-size: 13px;
+}
+
+
+.fundo-1 {
+  border-radius: 10px;
+  background: radial-gradient(circle, #d4c89a, #8b0000);
+}
+.fundo-2 {
+  background: radial-gradient(circle, #00b2a9, #6a0dad);
+}
+.fundo-3 {
+  background: radial-gradient(circle, #1a660b, #979797);
+}
+.fundo-4 {
+  background: radial-gradient(circle, #a8001f, #cc3903, #800118);
+}
+.fundo-5 {
+  background: radial-gradient(circle, #e9fa00, #ff0000), #b80018;
+}
+.fundo-6 {
+  background: radial-gradient(circle, #747373, #369b96, #055bfc);
+}
+.fundo-7 {
+  background: radial-gradient(circle, #00ff88, #1ac8d4), #002efa;
+}
+.fundo-8 {
+  background: radial-gradient(circle, #d6b600, #b17900, #4b4000);
+}
+.fundo-9 {
+  background: radial-gradient(circle, #ad0000, #c57a00);
+}
+
+
+.btn-seta {
+  background-color: #ffff;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  border: 0;
+  cursor: pointer;
+  transition: background-color 0 2s ease-in-out;
+  box-shadow: rgb(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.btn-seta.btn-voltar {
+  transform: rotate(180deg);
+}
+.btn-seta:hover {
+  background: radial-gradient(circle, #c76103, #ff7b00, #ff000073, #ffd900);
+}
+
+
+body::-webkit-scrollbar-track {
+  background-color: #eeded4a1;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #eeded4a1;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #eeded4a1;
+}
+
+
+.carta-virada {
+  display: none;
+}
+.carta-virada.carta-1 {
+  background: url(../imagens/bijuus/1-shukaku.jpg);
+}
+.carta-virada.carta-2 {
+  background: url(../imagens/bijuus/2-matatabi.jpg);
+}
+.carta-virada.carta-3 {
+  background: url(../imagens/bijuus/3-isobu.jpg);
+}
+.carta-virada.carta-4 {
+  background: url(../imagens/bijuus/4-son-goku.jpg);
+}
+.carta-virada.carta-5 {
+  background: url(../imagens/bijuus/5-kokuo.jpg);
+}
+.carta-virada.carta-6 {
+  background: url(../imagens/bijuus/6-saiken.jpg);
+}
+.carta-virada.carta-7 {
+  background: url(../imagens/bijuus/7-chomei.jpg);
+}
+.carta-virada.carta-8 {
+  background: url(../imagens/bijuus/8-gyuki.jpg);
+}
+.carta-virada.carta-9 {
+  background: url(../imagens/bijuus/9-kurama.jpg);
+}
+.carta-virada.mostrar-fundo-carta {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+  top: 0;
+  left: 0;
+  border-radius: 10px;
+  z-index: 2;
+}
+.cartao.virar {
+  /* transform: rotateZ(90deg); */
+  transform: rotate(-90deg);
+  transition: transform 0.6s ease-in-out;
+}
+
+
+.esconder {
+  display: none;
+}
